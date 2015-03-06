@@ -10,8 +10,8 @@
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
-    <script src="<?php bloginfo('template_directory'); ?>/script.js"></script>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Josefin+Sans' rel='stylesheet' type='text/css'>
+
 
   <?php wp_head(); ?>
 </head>
@@ -28,52 +28,34 @@ $url = $thumb['0'];
 
     <img src="<?php echo $url ?>" alt="">
 
+     <div id='nav'>
+
    <?php 
 
 
   }?>
+    <div class="navigation">
+      <div class="logo">
+        <h1>
+          <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
+        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
+          </a>
+        </h1>
+      </div>  <!-- /.container -->
+      <div class="nav">
+        <?php wp_nav_menu( array(
+          'container' => false,
+          'theme_locations' => 'primary'
+        )); ?>
 
-  <div id='nav'>
-    <div class="container">
-      <h1>
-        <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-      <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-        </a>
-      </h1>
-    </div>  <!-- /.container -->
-    <div class="nav">
-      <?php wp_nav_menu( array(
-        'container' => false,
-        'theme_locations' => 'primary'
-      )); ?>
-
-       <?php wp_nav_menu(array(
-         'container' => false,
-         'menu'=>'Social'
-         )); ?>
-    </div> 
-    <!-- end nav -->
-
+         <?php wp_nav_menu(array(
+           'container' => false,
+           'menu'=>'Social'
+           )); ?>
+      </div> 
+      <!-- end nav -->
+    </div>
   </div>
   <!-- end id nav -->
-
-  <script>
-  $(function() {
-    $(window).scroll(function(){
-
-        var testScroll = $(window).scrollTop(); 
-        console.log("testing >>", testScroll);
-
-        if(testScroll > 900){
-          $("nav").addClass("scrollin");
-        } else{
-          $("nav").removeClass("scrollin");
-        }
-
-      });
-      
-    });
-  </script>
-    <!-- Nav end -->
 </header><!--/.header-->
 

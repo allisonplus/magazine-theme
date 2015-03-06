@@ -170,7 +170,7 @@ img.alignright {
                    Default Styling
    ========================================================================== */
 body {
-  color: deeppink;
+  color: #333133;
   background: #F6EDE8; }
 
 .container {
@@ -183,16 +183,18 @@ body {
       max-height: 20%; }
 
 .content {
-  float: left;
-  width: 65%;
-  margin-right: 5%; }
+  clear: both; }
+  .content img {
+    width: 100%;
+    margin: 0 auto;
+    text-align: center; }
 
 .full {
   width: 100%; }
 
 /* links */
 a {
-  color: #BA209B;
+  color: #333133;
   text-decoration: none; }
 
 a:hover {
@@ -260,7 +262,11 @@ footer {
 
 /* =============================================================================
                    Navigation
-   ========================================================================== */
+   ====================================
+====================================== */
+ul {
+  padding: 0; }
+
 #menu-main {
   float: left; }
   #menu-main li {
@@ -271,18 +277,28 @@ footer {
       text-transform: uppercase; }
 
 #menu-social {
-  float: right;
-  margin-right: 10%; }
+  float: right; }
   #menu-social li {
     display: inline-block; }
     #menu-social li a {
       color: #333030;
-      padding-right: 40px; }
+      padding-left: 40px; }
 
 .scrollin {
   position: fixed;
   top: 0;
-  width: 100%; }
+  width: 100%;
+  background: #f6ede8;
+  padding-top: 2%; }
+
+.logo {
+  text-align: center; }
+
+.navigation {
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 13px;
+  max-width: 1200px;
+  margin: 0 auto; }
 
 /* =============================================================================
                    Comment Styling
@@ -455,3 +471,55 @@ p.form-allowed-tags, .nocomments {
 
 #respond p, #comments-list ul #respond {
   margin: 0; }
+
+.main {
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: 'Playfair Display', serif; }
+
+.date, .title, .excerpt {
+  display: inline-block;
+  width: 33.3%;
+  float: left;
+  min-height: 130px;
+  text-align: left;
+  margin-top: 2%;
+  margin-bottom: 3%;
+  margin-top: 3%; }
+  .date p, .title p, .excerpt p {
+    margin-top: 0;
+    line-height: 1.5; }
+    .date p a, .title p a, .excerpt p a {
+      display: block;
+      padding-top: 8%;
+      font-family: 'Josefin Sans', sans-serif;
+      text-transform: uppercase;
+      font-size: 12px; }
+      .date p a span, .title p a span, .excerpt p a span {
+        float: right;
+        font-size: 12px; }
+  .date h2, .title h2, .excerpt h2 {
+    margin-top: 0;
+    font-family: 'Playfair Display', serif;
+    font-style: italic;
+    font-size: 30px;
+    font-weight: 200;
+    line-height: 1.3; }
+
+.excerpt {
+  border-left: 1px solid black;
+  max-height: 130px;
+  font-size: 14px;
+  border-left: 5%;
+  text-align: justify;
+  padding-left: 2%; }
+
+.title {
+  padding-left: 2%; }
+
+.date {
+  border-right: 1px solid black; }
+
+article {
+  border-bottom: 1px solid black;
+  margin-bottom: 4%; }

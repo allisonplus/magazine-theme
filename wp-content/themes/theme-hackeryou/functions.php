@@ -13,6 +13,7 @@ function theme_setup() {
 	add_theme_support( 'post-thumbnails' );
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
+	add_image_size('large', 150, 150, true);
 
 
 
@@ -67,7 +68,7 @@ function hackeryou_scripts() {
 
   wp_enqueue_script(
     'scripts', //handle
-    get_template_directory_uri() . '/js/scripts.js', //source
+    get_template_directory_uri() . '/js/script.js', //source
     array( 'jquery', 'plugins' ), //dependencies
     null, // version number
     true //load in footer
@@ -118,22 +119,23 @@ add_filter( 'wp_page_menu_args', 'hackeryou_page_menu_args' );
  * Sets the post excerpt length to 40 characters.
  */
 function hackeryou_excerpt_length( $length ) {
-	return 40;
+	return 30;
 }
 add_filter( 'excerpt_length', 'hackeryou_excerpt_length' );
+
 
 /*
  * Returns a "Continue Reading" link for excerpts
  */
 function hackeryou_continue_reading_link() {
-	return ' <a href="'. get_permalink() . '">Continue reading <span class="meta-nav">&rarr;</span></a>';
+	return ' <a href="'. get_permalink() . '">Read More <span class="meta-nav">></span></a>';
 }
 
 /**
  * Replaces "[...]" (appended to automatically generated excerpts) with an ellipsis and hackeryou_continue_reading_link().
  */
 function hackeryou_auto_excerpt_more( $more ) {
-	return ' &hellip;' . hackeryou_continue_reading_link();
+	return ' ' . hackeryou_continue_reading_link();
 }
 add_filter( 'excerpt_more', 'hackeryou_auto_excerpt_more' );
 
@@ -275,5 +277,19 @@ $args = array(
 	);
 
 add_theme_support( 'custom-header', $args);
+
+if (class_exists('MultiPageThumbnails')) {
+
+new MultiPageThumbnails(array(
+
+'label' => 'Secondary Image',
+
+'id' => 'secondary-image',
+
+'page_type' => 'page'
+
+ ) );
+ }
+
 
 
