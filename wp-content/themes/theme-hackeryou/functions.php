@@ -14,8 +14,7 @@ function theme_setup() {
 	set_post_thumbnail_size(120, 90, true);
 	add_image_size('square', 150, 150, true);
 	add_image_size('large', 150, 150, true);
-
-
+	add_image_size('background', 1100);
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );
@@ -24,9 +23,13 @@ function theme_setup() {
 	* You can allow clients to create multiple menus by
   * adding additional menus to the array. */
 	register_nav_menus( array(
-		'primary' => 'Primary Navigation',
-		'secondary'=>'Secondary Navigation'
+		'primary' => 'Main Navigation (primary)',
+		'secondary'=>'Secondary Navigation',
+		'third' => 'Third Navigation',
+		'fourth' => 'Fourth Navigation'
 	) );
+
+	// add_action( 'init', 'register_nav_menus' ); 
 
 	/*
 	 * Switch default core markup for search form, comment form, and comments
@@ -276,20 +279,22 @@ $args = array(
 	'height' => 60,
 	);
 
-add_theme_support( 'custom-header', $args);
+//Get ID of each page / post
 
-if (class_exists('MultiPageThumbnails')) {
+add_filter( 'manage_posts_columns', 'revealid_add_id_column', 5 );
+add_action( 'manage_posts_custom_column', 'revealid_id_column_content', 5, 2 );
 
-new MultiPageThumbnails(array(
 
-'label' => 'Secondary Image',
+function revealid_add_id_column( $columns ) {
+   $columns['revealid_id'] = 'ID';
+   return $columns;
+}
 
-'id' => 'secondary-image',
-
-'page_type' => 'page'
-
- ) );
- }
+function revealid_id_column_content( $column, $id ) {
+  if( 'revealid_id' == $column ) {
+    echo $id;
+  }
+}
 
 
 

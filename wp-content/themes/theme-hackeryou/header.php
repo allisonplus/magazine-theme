@@ -10,12 +10,11 @@
 
   <?php // Load our CSS ?>
   <link rel="stylesheet" type="text/css" href="<?php bloginfo( 'stylesheet_url' ); ?>" />
-  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Josefin+Sans' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Playfair+Display:400,400italic|Port+Lligat+Sans' rel='stylesheet' type='text/css'>
 
 
   <?php wp_head(); ?>
 </head>
-
 
 <body <?php body_class(); ?>>
 
@@ -26,13 +25,13 @@ $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
 $url = $thumb['0'];
    ?>
 
+  <div class="viewHeight">
     <img src="<?php echo $url ?>" alt="">
+  </div> <!--/.viewHeight-->
 
-     <div id='nav'>
+  <div id='nav'>
 
    <?php 
-
-
   }?>
     <div class="navigation">
       <div class="logo">
@@ -42,10 +41,10 @@ $url = $thumb['0'];
           </a>
         </h1>
       </div>  <!-- /.container -->
-      <div class="nav">
+      <div class="nav clearfix">
         <?php wp_nav_menu( array(
           'container' => false,
-          'theme_locations' => 'primary'
+          'theme_location' => 'primary'
         )); ?>
 
          <?php wp_nav_menu(array(
