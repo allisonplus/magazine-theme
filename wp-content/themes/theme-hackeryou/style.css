@@ -200,10 +200,11 @@ body {
 /* links */
 a {
   color: #333133;
-  text-decoration: none; }
+  text-decoration: none;
+  transition: all 0.5s; }
 
 a:hover {
-  color: #D424B1; }
+  opacity: 0.5; }
 
 /* paragraphs */
 p {
@@ -263,7 +264,8 @@ pre {
                    Footer
    ========================================================================== */
 footer {
-  clear: both; }
+  clear: both;
+  padding-bottom: 1px; }
 
 /* =============================================================================
                    Navigation
@@ -282,6 +284,7 @@ ul {
       text-transform: uppercase; }
 
 #menu-social {
+  padding-right: 5%;
   float: right; }
   #menu-social li {
     display: inline-block; }
@@ -293,10 +296,14 @@ ul {
 .scrollin {
   position: fixed;
   top: 0;
+  z-index: 50;
   width: 100%;
   background: #f6ede8;
-  padding-top: 2%;
-  transition: 0.5s; }
+  box-shadow: 0px 0px 30px -10px black;
+  transition: all 1s; }
+
+.scrollin .navigation {
+  position: relative; }
 
 .logo {
   text-align: center;
@@ -308,17 +315,15 @@ ul {
     margin-top: 20px; }
 
 .navigation {
+  position: absolute;
+  bottom: 0;
+  background: RGBA(246, 237, 232, 1);
+  width: 100%;
   font-family: 'Port Lligat Sans', sans-serif;
   font-size: 13px;
-  max-width: 1200px;
   margin: 0 auto;
-  transition: 0.5s; }
-
-#nav {
-  box-shadow: 0px 0px 30px -10px black; }
-
-.nav {
-  padding-bottom: 20px; }
+  transition: 0.5s;
+  z-index: 50; }
 
 .nav #menu-main {
   padding-left: 10px;
@@ -557,8 +562,12 @@ article {
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
   margin: 0; }
 
-.viewHeight img {
-  width: 100%;
+.viewHeight {
+  object-fit: cover;
+  height: 100vh;
+  position: relative; }
+
+.viewHeight .hero {
   height: 100vh; }
 
 .instagramFeed {
@@ -566,7 +575,9 @@ article {
   padding: 5% 0;
   text-align: center; }
   .instagramFeed .fa {
-    font-size: 30px; }
+    font-size: 30px;
+    position: relative;
+    z-index: 10; }
 
 img.thumbnail {
   border-radius: 50%; }
@@ -633,7 +644,8 @@ footer {
   float: left;
   list-style-type: none;
   font-family: 'Port Lligat Sans', sans-serif;
-  text-align: left; }
+  text-align: center;
+  min-height: 155px; }
   .footerInfo h5 {
     text-transform: uppercase;
     margin-bottom: 3%;
@@ -704,3 +716,52 @@ footer {
   .nav-next span {
     padding-left: 4%;
     font-size: 18px; }
+
+@media all and (max-width: 1200px) {
+  .main {
+    padding: 5%; }
+  .blogContent a {
+    font-size: 40px; } }
+
+@media all and (max-width: 490px) {
+  #menu-main li a {
+    padding-right: 20px; }
+  #menu-social li a {
+    padding-left: 20px; } }
+
+@media all and (max-width: 350px) {
+  #menu-main {
+    float: none;
+    text-align: center; }
+    #menu-main li a {
+      padding-right: 20px; }
+  #menu-social {
+    float: none;
+    text-align: center; }
+    #menu-social li a {
+      padding-left: 20px; } }
+
+@media all and (max-width: 710px) {
+  .main {
+    padding: 5%; }
+  .blogContent h2 {
+    line-height: 1; }
+    .blogContent h2 a {
+      font-size: 30px; } }
+
+@media all and (max-width: 550px) {
+  .footerInfo {
+    width: 50%;
+    margin-top: 40px; } }
+
+@media all and (max-width: 520px) {
+  .blogContent h2 {
+    line-height: 1; }
+    .blogContent h2 a {
+      font-size: 20px; }
+  .blogContent .blogHome1 img {
+    width: 100%;
+    padding-left: 0; }
+  .blogContent .blogHome2 img {
+    width: 100%;
+    padding-right: 0; } }

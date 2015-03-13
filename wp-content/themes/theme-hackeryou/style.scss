@@ -83,10 +83,11 @@ body {
 a {
   color: #333133;
   text-decoration: none;
+  transition: all 0.5s;
 }
 
 a:hover {
-  color: #D424B1;
+  opacity: 0.5;
 }
 
 /* paragraphs */
@@ -160,6 +161,7 @@ pre {
 
 footer {
   clear:both;
+  padding-bottom: 1px;
 }
 
 
@@ -186,6 +188,7 @@ ul {
 }
 
 #menu-social{
+  padding-right: 5%;
   float: right;
     li{
         display:inline-block;
@@ -200,10 +203,15 @@ ul {
   .scrollin{
     position: fixed;
     top: 0;
+    z-index: 50;
     width: 100%;
     background: #f6ede8;
-    padding-top: 2%;
-    transition: 0.5s;
+    box-shadow: 0px 0px 30px -10px black;
+    transition: all 1s;
+  }
+
+  .scrollin .navigation{
+    position: relative;
   }
 
   .logo{
@@ -219,20 +227,16 @@ ul {
   }
 
   .navigation{
+    position: absolute;
+    bottom:0;
+    background: RGBA(246, 237, 232, 1);
+    width: 100%;
     font-family: 'Port Lligat Sans', sans-serif;
     font-size: 13px;
-    max-width: 1200px;
     margin: 0 auto;
     transition: 0.5s;
+    z-index: 50;
 
-  }
-
-  #nav{
-       box-shadow: 0px 0px 30px -10px black;
-  }
-
-  .nav{
-    padding-bottom: 20px;
   }
 
   .nav #menu-main{
@@ -450,9 +454,14 @@ article{
   }
 }
 
-.viewHeight img {
-  width:100%;
-  height:100vh;
+.viewHeight {
+  object-fit: cover;
+  height: 100vh;
+  position: relative;
+}
+
+.viewHeight .hero{
+  height: 100vh;
 }
 
 // --------- Home Instagram -----------------
@@ -463,6 +472,8 @@ article{
   text-align:center;
     .fa {
       font-size: 30px;
+      position: relative;
+      z-index: 10;
     }
 }
 
@@ -550,7 +561,8 @@ footer {
   float:left;
   list-style-type: none;
   font-family: 'Port Lligat Sans', sans-serif;
-  text-align: left;
+  text-align: center;
+  min-height: 155px;
 
   h5{
     text-transform: uppercase;
@@ -643,3 +655,104 @@ footer {
   font-size: 18px;
   }
 }
+
+// ------------media Queries ---------------
+
+@media all and (max-width: 1200px) {
+.main{
+  padding: 05%;
+}
+.blogContent{
+  a{
+    font-size: 40px;
+  }
+}
+}//end 1200
+
+@media all and (max-width: 490px) {
+  #menu-main{
+    li{
+      a{
+        padding-right: 20px;
+      }
+    }
+  } 
+  #menu-social{
+    li{
+      a{
+        padding-left:20px;
+      }
+    }
+  }
+}//end 490
+
+@media all and (max-width: 350px) {
+  #menu-main{
+    float: none;
+    text-align: center;
+    li{
+      a{
+        padding-right: 20px;
+      }
+    }
+  } 
+  #menu-social{
+    float:none;
+    text-align: center;
+    li{
+      a{
+        padding-left:20px;
+      }
+    }
+  }
+} //end 350
+
+@media all and (max-width: 710px) {
+.main{
+  padding: 05%;
+}
+.blogContent{
+  h2{
+    line-height: 1;
+    a{
+      font-size: 30px;
+      }
+    }
+  }
+}//end 710
+
+@media all and (max-width: 550px) {
+  .footerInfo{
+    width: 50%;
+    margin-top: 40px;
+  }
+
+}//end 550
+
+@media all and (max-width: 520px) {
+.blogContent{
+  h2{
+    line-height: 1;
+    a{
+      font-size: 20px;
+      }
+    }
+
+  .blogHome1{
+    img{
+      width: 100%;
+      padding-left: 0;
+    }
+  }
+
+  .blogHome2{
+    img{
+      width: 100%;
+      padding-right: 0;
+    }
+  }
+}
+
+}//end 550
+
+

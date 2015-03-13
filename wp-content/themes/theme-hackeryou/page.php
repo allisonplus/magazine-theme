@@ -9,9 +9,8 @@ $thumb_url = $thumb_url_array[0];
 
  ?>
 
-<div class="homeImage" style="background:url(<?= $thumb_url ?>); background-repeat:no-repeat; background-size: cover; ">
+<div class="homeImage" style="background:url(<?= $thumb_url ?>); background-repeat:no-repeat; height:70vh; background-size: cover; ">
   <div class="homeTitle">
-   <h2><?php the_title(); ?></h2>
   </div>
   <!-- homeTitle -->
 </div>

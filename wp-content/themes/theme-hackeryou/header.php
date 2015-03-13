@@ -26,8 +26,7 @@ $url = $thumb['0'];
    ?>
 
   <div class="viewHeight">
-    <img src="<?php echo $url ?>" alt="">
-  </div> <!--/.viewHeight-->
+    <img class='hero' src="<?php echo $url ?>" alt="">
 
   <div id='nav'>
 
@@ -54,7 +53,10 @@ $url = $thumb['0'];
       </div> 
       <!-- end nav -->
     </div>
+    <!-- end navigation -->
   </div>
-  <!-- end id nav -->
+    <!-- end id nav -->
+</div>
+<!--.viewHeight  -->
 </header><!--/.header-->
 

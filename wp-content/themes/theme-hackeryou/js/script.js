@@ -8,7 +8,7 @@
         var testScroll = $(window).scrollTop(); 
         // console.log("testing >>", testScroll);
 
-        if(testScroll > 800){
+        if(testScroll > $(".viewHeight").height()){
           // $("#nav").fadeIn(2000);
           $("#nav").addClass("scrollin");
           $(".logo").css("float", "left");

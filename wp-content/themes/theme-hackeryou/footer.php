@@ -1,10 +1,10 @@
 <footer>
-  <div class="container containerFooter">
+  <div class="container containerFooter clearfix">
 
 
   <div class="footer-nav">
 
-	  <div class="footerInfo">
+	  <div class="footerInfo clearfix">
 	 
 		<h5>Our Company</h5>
 	
@@ -15,7 +15,7 @@
 	        )); ?>
 	  </div>
 	  <!-- footer info -->
-	  <div class="footerInfo">
+	  <div class="footerInfo clearfix">
 
 	  	<h5>Follow Us</h5>
          <?php wp_nav_menu(array(
@@ -25,14 +25,14 @@
       </div>
       <!-- footerInfo -->
 
-      <div class="footerInfo">
+      <div class="footerInfo clearfix">
 		  <h5>Visit Us</h5>
 		  	<p>483 Queen St. West</p>
 		  	<p>Toronto, On</p>
 		  	<p>M5V 2A9</p>
 		</div>
 		<!-- footerinfo -->
-	<div class="footerInfo">
+	<div class="footerInfo clearfix">
   <h5>Contact Us</h5>
 	  <p><a href="hello@nailedit.com">hello@nailedit.com</a></p>
 	  <p><a href="tel:1416888888"></a>416-888-8888</p>
