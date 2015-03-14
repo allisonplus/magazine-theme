@@ -16,7 +16,8 @@
 
 <?php while ( have_posts() ) : the_post(); ?>
 
-		<?php the_post_thumbnail( 'category-thumb' ); ?>
+
+	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog'); ?></a>
 		<div class="date">
 		<p><?php echo get_the_date(); ?></p>
 		</div>

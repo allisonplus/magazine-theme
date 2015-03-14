@@ -28,18 +28,17 @@ $url = $thumb['0'];
   <div class="viewHeight">
     <img class='hero' src="<?php echo $url ?>" alt="">
 
-  <div id='nav'>
-
-   <?php 
+  <?php 
   }?>
-    <div class="navigation">
+  <div id='nav'class="notFront">
+
       <div class="logo">
         <h1>
           <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
         <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
           </a>
         </h1>
-      </div>  <!-- /.container -->
+      </div>  <!-- /.logo -->
       <div class="nav clearfix">
         <?php wp_nav_menu( array(
           'container' => false,
@@ -52,11 +51,8 @@ $url = $thumb['0'];
            )); ?>
       </div> 
       <!-- end nav -->
-    </div>
-    <!-- end navigation -->
   </div>
     <!-- end id nav -->
 </div>
-<!--.viewHeight  -->
-</header><!--/.header-->
+      
 

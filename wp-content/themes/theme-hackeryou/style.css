@@ -275,7 +275,8 @@ ul {
   padding: 0; }
 
 #menu-main {
-  float: left; }
+  float: left;
+  padding-left: 5%; }
   #menu-main li {
     display: inline-block; }
     #menu-main li a {
@@ -293,6 +294,47 @@ ul {
       padding-left: 40px;
       font-size: 18px; }
 
+.logo {
+  text-align: center;
+  transition: 0.5s; }
+  .logo h1 {
+    margin: 0; }
+  .logo img {
+    display: inline;
+    margin-top: 20px; }
+
+.nav {
+  font-family: 'Port Lligat Sans', sans-serif; }
+
+.navigation {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-family: 'Port Lligat Sans', sans-serif;
+  background: RGBA(246, 237, 232, 1);
+  font-size: 13px;
+  margin: 0 auto;
+  transition: 0.5s;
+  z-index: 50; }
+
+.notFront {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  background: RGBA(246, 237, 232, 1);
+  position: fixed;
+  width: 100%;
+  font-family: 'Port Lligat Sans', sans-serif;
+  box-shadow: 0px 0px 30px -10px black;
+  font-size: 13px;
+  margin: 0 auto;
+  transition: 0.5s;
+  z-index: 50; }
+
+.nav #menu-main {
+  padding-left: 5%;
+  font-size: 15px; }
+
 .scrollin {
   position: fixed;
   top: 0;
@@ -305,29 +347,14 @@ ul {
 .scrollin .navigation {
   position: relative; }
 
-.logo {
-  text-align: center;
-  transition: 0.5s; }
-  .logo h1 {
-    margin: 0; }
-  .logo img {
-    display: inline;
-    margin-top: 20px; }
-
-.navigation {
-  position: absolute;
-  bottom: 0;
+.notFront {
+  position: fixed;
   background: RGBA(246, 237, 232, 1);
   width: 100%;
-  font-family: 'Port Lligat Sans', sans-serif;
-  font-size: 13px;
-  margin: 0 auto;
-  transition: 0.5s;
-  z-index: 50; }
+  top: 0; }
 
-.nav #menu-main {
-  padding-left: 10px;
-  font-size: 15px; }
+.logo2 {
+  text-align: center; }
 
 /* =============================================================================
                    Comment Styling
@@ -553,6 +580,9 @@ article {
   border-bottom: 1px solid black;
   margin-bottom: 4%; }
 
+.blog-navigation {
+  font-family: 'Port Lligat Sans', sans-serif; }
+
 .homeImage h2 {
   text-align: center;
   padding: 300px 0;
@@ -634,6 +664,30 @@ li.widget-container {
   .blogHome2 h2 {
     text-align: left;
     display: inline; }
+
+.aboutStaff {
+  display: inline-block;
+  width: 33.3%;
+  float: left;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Playfair Display', serif; }
+  .aboutStaff .name {
+    font-size: 18px; }
+  .aboutStaff .job {
+    font-style: italic; }
+
+.entry-content .paragraph {
+  margin-bottom: 5%;
+  font-size: 18px; }
+
+.headerAbout img {
+  object-fit: cover;
+  height: 60vh; }
+
+.aboutImage {
+  border-radius: 50%;
+  width: 80%; }
 
 footer {
   background: white; }
@@ -723,11 +777,68 @@ footer {
   .blogContent a {
     font-size: 40px; } }
 
+@media all and (max-width: 710px) {
+  .logo {
+    display: none; }
+  .main {
+    padding: 5%; }
+  .blogContent h2 {
+    line-height: 1; }
+    .blogContent h2 a {
+      font-size: 30px; }
+  .date {
+    display: none; }
+  .excerpt, .title {
+    width: 50%; }
+  .title {
+    padding-right: 2%; }
+  .postInfo {
+    margin: 15px 0; }
+  .postHead {
+    font-size: 16px; }
+    .postHead h1 {
+      margin-bottom: 15px; }
+    .postHead .entry-meta {
+      margin-bottom: 15px; } }
+
+@media all and (max-width: 565px) {
+  .excerpt p a {
+    padding-top: 4%; } }
+
+@media all and (max-width: 550px) {
+  .footerInfo {
+    width: 50%;
+    margin-top: 40px; }
+  .entry-title {
+    font-size: 28px; } }
+
+@media all and (max-width: 520px) {
+  .blogContent h2 {
+    line-height: 1; }
+    .blogContent h2 a {
+      font-size: 30px; }
+  .instagramFeed .fa {
+    font-size: 25px; }
+  .blogHome1 img {
+    width: 100%;
+    padding-left: 0; }
+  .blogHome2 img {
+    width: 100%;
+    padding-right: 0; } }
+
 @media all and (max-width: 490px) {
   #menu-main li a {
     padding-right: 20px; }
   #menu-social li a {
-    padding-left: 20px; } }
+    padding-left: 20px; }
+  .excerpt, .title {
+    width: 100%;
+    min-height: 0;
+    margin-bottom: 0; }
+    .excerpt h2, .title h2 {
+      margin-bottom: 0; }
+  .postInfo .postHead {
+    width: 100%; } }
 
 @media all and (max-width: 350px) {
   #menu-main {
@@ -739,29 +850,8 @@ footer {
     float: none;
     text-align: center; }
     #menu-social li a {
-      padding-left: 20px; } }
-
-@media all and (max-width: 710px) {
-  .main {
-    padding: 5%; }
-  .blogContent h2 {
-    line-height: 1; }
-    .blogContent h2 a {
-      font-size: 30px; } }
-
-@media all and (max-width: 550px) {
+      padding-left: 20px; }
+  h2.entry-title {
+    font-size: 25px; }
   .footerInfo {
-    width: 50%;
-    margin-top: 40px; } }
-
-@media all and (max-width: 520px) {
-  .blogContent h2 {
-    line-height: 1; }
-    .blogContent h2 a {
-      font-size: 20px; }
-  .blogHome1 img {
-    width: 100%;
-    padding-left: 0; }
-  .blogHome2 img {
-    width: 100%;
-    padding-right: 0; } }
+    margin-top: 20px; } }

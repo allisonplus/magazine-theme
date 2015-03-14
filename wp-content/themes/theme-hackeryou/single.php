@@ -43,7 +43,7 @@
         </div>
         <!-- end Post ID -->
 
-        <div id="nav-below" class="navigation">
+        <div id="nav-below" class="blog-navigation">
           <p class="nav-previous"><?php previous_post_link('%link', '<span> < </span> PREVIOUS POST'); ?></p>
 
           <p class="nav-next"><?php next_post_link('%link', 'NEXT POST <span> > </span>'); ?></p>
