@@ -1,10 +1,10 @@
 /*
-Theme Name: Nailed It
-Theme URI: http://hackeryou.com;
-Description: A custom nail salon theme
+Theme Name: Magazine
+Theme URI: 
+Description: A custom magazine theme
 Version: 1.0
 Author: Sarah and Allison
-Author URI: http://hackeryou.com
+Author URI: 
 */
 /* =============================================================================
                    Normalize, border box and clearfix
@@ -192,7 +192,9 @@ body {
   .content img {
     width: 100%;
     margin: 0 auto;
-    text-align: center; }
+    text-align: center;
+    height: 100vh;
+    object-fit: cover; }
 
 .full {
   width: 100%; }
