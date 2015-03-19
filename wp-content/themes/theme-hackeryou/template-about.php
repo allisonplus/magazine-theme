@@ -45,6 +45,8 @@
 
             $image = get_sub_field('image');
 
+            $imagr_url = $image['sizes']['about-circle'];
+
             if( !empty($image) ): ?>
             <div class="aboutStaff">
                 <img class='aboutImage' src="<?php echo $image['url']; ?>" alt="<?php echo $image['alt']; ?>" />

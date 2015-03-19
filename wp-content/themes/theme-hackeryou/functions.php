@@ -15,7 +15,13 @@ function theme_setup() {
 	add_image_size('square', 150, 150, true);
 	add_image_size('large', 150, 150, true);
 	add_image_size('background', 1100);
-	add_image_size('blog', 1200, 600, true);
+	add_image_size('blog-front', 600, 270, true);
+	add_image_size('blog-index', 1200, 350, true);
+	add_image_size('blog-pull', 1400, 400, true);
+	add_image_size('about-circle', 250, 250, true);
+
+
+
 
 	// Add default posts and comments RSS feed links to head
 	add_theme_support( 'automatic-feed-links' );

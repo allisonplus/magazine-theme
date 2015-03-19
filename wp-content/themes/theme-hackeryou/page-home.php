@@ -4,12 +4,12 @@
 <!-- close main -->
 <?php 
 $thumb_id = get_post_thumbnail_id(37);
-$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'background', true);
+$thumb_url_array = wp_get_attachment_image_src($thumb_id, 'blog-pull', true);
 $thumb_url = $thumb_url_array[0];
 
  ?>
 
-<div class="homeImage" style="background:url(<?= $thumb_url ?>); background-repeat:no-repeat; height:70vh; background-size: cover; ">
+<div class="homeImage" style="background:url(<?= $thumb_url ?>); background-repeat: no-repeat;   background-size: cover;">
   <div class="homeTitle">
   </div>
   <!-- homeTitle -->
@@ -29,7 +29,7 @@ $thumb_url = $thumb_url_array[0];
        foreach($lastposts as $post) : setup_postdata($post);
 
        if ( 1 == $i ) { $firstclass="firstpost"; };
-       $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
+       $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'blog-front' );
       $url = $thumb['0'];
 
       $title = get_the_title($post ->ID); 

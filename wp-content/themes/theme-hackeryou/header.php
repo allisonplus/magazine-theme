@@ -4,6 +4,7 @@
 	<?php // Load Meta ?>
   <meta charset="<?php bloginfo( 'charset' ); ?>" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="<?php bloginfo('template_directory'); ?>/img/square.png" />
   <title><?php  wp_title('|', true, 'right'); ?></title>
   <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
   <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
@@ -24,35 +25,31 @@
 $thumb = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), '' );
 $url = $thumb['0'];
    ?>
+  <div class="headContainer">
 
-  <div class="viewHeight">
-    <img class='hero' src="<?php echo $url ?>" alt="">
+    <div class="viewHeight hero" style="background-image: url(<?= $url ?>)">
 
-  <?php 
-  }?>
-  <div id='nav'class="notFront">
 
-      <div class="logo">
-        <h1>
-          <a href="<?php echo home_url( '/' ); ?>" title="<?php bloginfo( 'name', 'display' ); ?>" rel="home">
-        <img src="<?php header_image(); ?>" height="<?php echo get_custom_header()->height; ?>" width="<?php echo get_custom_header()->width; ?>" alt="" />
-          </a>
-        </h1>
-      </div>  <!-- /.logo -->
-      <div class="nav clearfix">
-        <?php wp_nav_menu( array(
-          'container' => false,
-          'theme_location' => 'primary'
-        )); ?>
+    <?php 
+    }?>
+    <div id='nav'class="notFront">
+        <div class="nav clearfix">
+          <?php wp_nav_menu( array(
+            'container' => false,
+            'theme_location' => 'primary'
+          )); ?>
 
-         <?php wp_nav_menu(array(
-           'container' => false,
-           'menu'=>'Social'
-           )); ?>
-      </div> 
-      <!-- end nav -->
+           <?php wp_nav_menu(array(
+             'container' => false,
+             'menu'=>'Social'
+             )); ?>
+        </div> 
+        <!-- end nav -->
+    </div>
+      <!-- end id nav -->
   </div>
-    <!-- end id nav -->
-</div>
+  <!-- end viewHeight -->
+</div> 
+<!-- End headContainer -->
       
 

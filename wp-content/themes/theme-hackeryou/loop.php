@@ -17,8 +17,12 @@
 <?php while ( have_posts() ) : the_post(); ?>
 
 
-	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog'); ?></a>
+}
+	<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('blog-index'); ?></a>
 		<div class="date">
+
+}
+
 		<p><?php echo get_the_date(); ?></p>
 		</div>
 		<!-- end .date -->

@@ -69,11 +69,10 @@ body {
 .content {
   clear: both;
   img{
-  width: 100%;
+  max-width: 100%;
   margin: 0 auto;
-  text-align: center;
-  height: 100vh;
   object-fit: cover;
+  overflow:hidden;
   }
 }
 
@@ -178,6 +177,8 @@ ul {
 #menu-main{
   float: left;
   padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
     li{
       display:inline-block;
       a{
@@ -195,6 +196,8 @@ ul {
 #menu-social{
   padding-right: 5%;
   float: right;
+  padding-top: 1%;
+  padding-bottom: 1%;
     li{
         display:inline-block;
         a{
@@ -219,6 +222,7 @@ ul {
 
   .nav{
     font-family: 'Port Lligat Sans', sans-serif;
+    box-shadow: 0px 0px 30px -10px black;
   }
 
   .navigation{
@@ -488,26 +492,23 @@ article{
 // ----------Home -----------
 
 .homeImage {
-  h2 {
-    text-align: center;
-    padding:300px 0;
-    font-family: 'Playfair Display', serif;
-    font-size: 35px;
-    color: #F6EDE8;
-    text-shadow: 0 0 10px rgba(0,0,0,0.5);
-    margin: 0;
+ height: 60vh;
+ background-repeat:no-repeat;
+  background-position: center;
   }
+
+.headContainer{
+  height: 100vh;
 }
 
 .viewHeight {
-  object-fit: cover;
-  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
   position: relative;
 }
 
-.viewHeight .hero{
-  height: 100vh;
-}
 
 // --------- Home Instagram -----------------
 
@@ -598,9 +599,10 @@ li.widget-container{
 
 .aboutStaff{
   display: inline-block;
-  width: 33.3%;
+    width: 30%;
   float: left;
-  margin: 0 auto;
+  margin-left: 6%;
+  margin-right: -6%;
   text-align: center;
   font-family: 'Playfair Display', serif;
   .name {
@@ -622,8 +624,8 @@ li.widget-container{
 }
 
 .aboutImage{
-  border-radius: 50%;
-  width: 80%;
+  width: 100%;
+  padding-left: 2%;
 }
 
 // -------Footer ---------
@@ -698,7 +700,6 @@ footer {
   float: left;
   font-family: 'Port Lligat Sans';
   text-align: left;
-  font-size: 14px;
   margin-bottom: 30px;
   p {
     margin-top:0;
@@ -790,6 +791,18 @@ footer {
   }
 
   }
+
+  .aboutStaff{
+    width: 100%;
+      float: none;
+  margin-left: 0;
+  margin-right: 0;
+
+  }
+
+  .aboutImage{
+  padding-left: 0;
+}
   
 }//end 710
 
@@ -873,7 +886,7 @@ footer {
 }//end 490
 
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 400px) {
   #menu-main{
     float: none;
     text-align: center;
@@ -883,6 +896,24 @@ footer {
       }
     }
   } 
+
+
+.headContainer{
+  height:300px;
+}
+
+  .ViewHeight{
+    max-height: 100%;
+   }
+
+   .homeImage{
+    height: 160px;
+   }
+
+   .content img{
+    object-fit: contain;
+    height: 150px;
+   }
 
   #menu-social{
     float:none;
@@ -901,6 +932,6 @@ footer {
   .footerInfo {
     margin-top:20px;
   }
-} //end 350
+} //end 400
 
 

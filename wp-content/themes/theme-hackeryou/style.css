@@ -190,11 +190,10 @@ body {
 .content {
   clear: both; }
   .content img {
-    width: 100%;
+    max-width: 100%;
     margin: 0 auto;
-    text-align: center;
-    height: 100vh;
-    object-fit: cover; }
+    object-fit: cover;
+    overflow: hidden; }
 
 .full {
   width: 100%; }
@@ -278,7 +277,9 @@ ul {
 
 #menu-main {
   float: left;
-  padding-left: 5%; }
+  padding-left: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%; }
   #menu-main li {
     display: inline-block; }
     #menu-main li a {
@@ -288,7 +289,9 @@ ul {
 
 #menu-social {
   padding-right: 5%;
-  float: right; }
+  float: right;
+  padding-top: 1%;
+  padding-bottom: 1%; }
   #menu-social li {
     display: inline-block; }
     #menu-social li a {
@@ -306,7 +309,8 @@ ul {
     margin-top: 20px; }
 
 .nav {
-  font-family: 'Port Lligat Sans', sans-serif; }
+  font-family: 'Port Lligat Sans', sans-serif;
+  box-shadow: 0px 0px 30px -10px black; }
 
 .navigation {
   position: absolute;
@@ -585,22 +589,20 @@ article {
 .blog-navigation {
   font-family: 'Port Lligat Sans', sans-serif; }
 
-.homeImage h2 {
-  text-align: center;
-  padding: 300px 0;
-  font-family: 'Playfair Display', serif;
-  font-size: 35px;
-  color: #F6EDE8;
-  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-  margin: 0; }
+.homeImage {
+  height: 60vh;
+  background-repeat: no-repeat;
+  background-position: center; }
+
+.headContainer {
+  height: 100vh; }
 
 .viewHeight {
-  object-fit: cover;
-  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100%;
   position: relative; }
-
-.viewHeight .hero {
-  height: 100vh; }
 
 .instagramFeed {
   background: white;
@@ -669,9 +671,10 @@ li.widget-container {
 
 .aboutStaff {
   display: inline-block;
-  width: 33.3%;
+  width: 30%;
   float: left;
-  margin: 0 auto;
+  margin-left: 6%;
+  margin-right: -6%;
   text-align: center;
   font-family: 'Playfair Display', serif; }
   .aboutStaff .name {
@@ -688,8 +691,8 @@ li.widget-container {
   height: 60vh; }
 
 .aboutImage {
-  border-radius: 50%;
-  width: 80%; }
+  width: 100%;
+  padding-left: 2%; }
 
 footer {
   background: white; }
@@ -744,7 +747,6 @@ footer {
   float: left;
   font-family: 'Port Lligat Sans';
   text-align: left;
-  font-size: 14px;
   margin-bottom: 30px; }
   .entry-content p {
     margin-top: 0; }
@@ -801,7 +803,14 @@ footer {
     .postHead h1 {
       margin-bottom: 15px; }
     .postHead .entry-meta {
-      margin-bottom: 15px; } }
+      margin-bottom: 15px; }
+  .aboutStaff {
+    width: 100%;
+    float: none;
+    margin-left: 0;
+    margin-right: 0; }
+  .aboutImage {
+    padding-left: 0; } }
 
 @media all and (max-width: 565px) {
   .excerpt p a {
@@ -842,12 +851,21 @@ footer {
   .postInfo .postHead {
     width: 100%; } }
 
-@media all and (max-width: 350px) {
+@media all and (max-width: 400px) {
   #menu-main {
     float: none;
     text-align: center; }
     #menu-main li a {
       padding-right: 20px; }
+  .headContainer {
+    height: 300px; }
+  .ViewHeight {
+    max-height: 100%; }
+  .homeImage {
+    height: 160px; }
+  .content img {
+    object-fit: contain;
+    height: 150px; }
   #menu-social {
     float: none;
     text-align: center; }

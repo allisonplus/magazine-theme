@@ -34,8 +34,8 @@
 		<!-- footerinfo -->
 	<div class="footerInfo clearfix">
   <h5>Contact Us</h5>
-	  <p><a href="hello@nailedit.com">hello@nailedit.com</a></p>
-	  <p><a href="tel:1416888888"></a>416-888-8888</p>
+	  <p><a href="hello@sarahlesh.com">hello@sarahlesh.com</a></p>
+	    <p><a href="hello@allisontarr.com">hello@allisontarr.com</a></p>
   </div>
   <!-- footerInfo -->
       </div> 
